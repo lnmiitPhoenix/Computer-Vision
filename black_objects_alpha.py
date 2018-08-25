@@ -30,19 +30,19 @@ while(1):
     for pic, contour in enumerate(contours):
         area = cv2.contourArea(contour)
         if(area>300):
-            x,y,w,h = cv2.boundingRect(contour)	
+            x,y,w,h = cv2.boundingRect(contour)
             img = cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
             cv2.putText(img,"Blue color",(x,y),cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255,0,0))
     cv2.imshow("Color Tracking",img)
     output = frame.copy()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     circles = cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, 1.2, 20)
- 
+
 # ensure at least some circles were found
     if circles is not None:
 	# convert the (x, y) coordinates and radius of the circles to integers
         circles = np.round(circles[0, :]).astype("int")
- 
+
 	# loop over the (x, y) coordinates and radius of the circles
         for (x, y, r) in circles:
           # draw the circle in the output image, then draw a rectangle
@@ -50,11 +50,11 @@ while(1):
           cv2.circle(output, (x, y), r, (0, 255, 0), 4)
 
           cv2.rectangle(output, (x - 5, y - 5), (x + 5, y + 5), (0, 128, 255), -1)
- 
+
 	# show the output image
         cv2.imshow("output", output)
 
-    
+
     k = cv2.waitKey(5) & 0xFF
     if k == 27:
         break
