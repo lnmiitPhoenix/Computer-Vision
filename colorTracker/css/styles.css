@@ -1,0 +1,26 @@
+label[for="image"] {
+    display: inline-block;
+    position: relative !important;
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+img {
+    min-width: 50vw;
+    max-width: 100vw;
+    height: 42vmax;
+    padding: 2em;
+}
+
+input[type="file"] {
+    width: 100%;
+    font-size: 2rem;
+}
+
+.rect {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: -1000px;
+    top: -1000px;
+}
