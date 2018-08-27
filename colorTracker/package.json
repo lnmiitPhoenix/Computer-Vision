@@ -1,0 +1,11 @@
+{
+  "name": "colortracker",
+  "version": "1.0.0",
+  "description": "Simple color tracker model using javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abhishek Tiwari",
+  "license": "ISC"
+}
