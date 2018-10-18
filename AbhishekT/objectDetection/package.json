@@ -1,0 +1,15 @@
+{
+  "name": "objectdetection",
+  "version": "1.0.0",
+  "description": "object tracking",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abhishek Tiwari",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.96.0",
+    "tracking": "^1.1.3"
+  }
+}
