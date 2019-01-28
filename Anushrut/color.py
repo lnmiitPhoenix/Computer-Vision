@@ -48,7 +48,7 @@ while(1):
     cv2.imshow('blue',blue)
     cv2.imshow('red',red)
     img=np.uint8([[[0,0,0]]])
-    (_,contours,hierarchy)=cv2.findContours(b3,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+    (contours,hierarchy)=cv2.findContours(b3,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
     for pic, contour in enumerate(contours):
         area = cv2.contourArea(contour)
         if(area>300):
@@ -57,7 +57,7 @@ while(1):
             cv2.putText(img,"Blue color",(x,y),cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255,0,0))
 
 
-    (_,contours,hierarchy)=cv2.findContours(g3,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+    (contours,hierarchy)=cv2.findContours(g3,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
     for pic, contour in enumerate(contours):
         area = cv2.contourArea(contour)
         if(area>300):
@@ -66,7 +66,7 @@ while(1):
             cv2.putText(img,"green color",(x,y),cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,0))
 
 
-    (_,contours,hierarchy)=cv2.findContours(r3,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+    (contours,hierarchy)=cv2.findContours(r3,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
     for pic, contour in enumerate(contours):
         area = cv2.contourArea(contour)
         if(area>300):
