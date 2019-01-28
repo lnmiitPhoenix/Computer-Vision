@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>color tracking tank</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+
+
+
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        #video,
+        #canvas {
+            bottom: 0;
+            position: absolute;
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo-title">
+        <p>use a magenta colored object to control the
+            scene</p>
+    </div>
+
+    <video id="video" width="320" height="240" preload autoplay loop muted></video>
+    <canvas id="canvas" width="320" height="240"></canvas>
+
+
+    <script src="node_modules/tracking/build/tracking-min.js">
+    </script>
+    <script src="node_modules/three/build/three.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
